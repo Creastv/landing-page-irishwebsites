@@ -5,6 +5,9 @@ $md-lp: "only screen and (max-width: 1200px)";
 $lg-lp: "only screen and (max-width: 1400px)";
 
 
+.color-lp{
+   color: #4db53c
+}
 
 .wraper-lp{
     width:100%;
@@ -195,7 +198,33 @@ $lg-lp: "only screen and (max-width: 1400px)";
     padding: 60px 0;
     h2{
         font-size: 45px;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+        .line-lp{
+            display: block;
+            width: 10px;
+            height: 3px;
+            background:#4db53c;
+            border-radius: 1px;
+            margin-top: 30px;
+            &:before{
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background: #4db53c;
+                border-radius: 1px;
+                left: 30px;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 3px;
+                background: #4db53c;
+                border-radius: 1px;
+                left: 55px;
+            }
+        }
     }
     .img{
         img{

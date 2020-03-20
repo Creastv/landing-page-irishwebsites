@@ -1,3 +1,7 @@
+.color-lp {
+  color: #4db53c;
+}
+
 .wraper-lp {
   width: 100%;
   background-color: #1b252f;
@@ -228,7 +232,36 @@
 
 .content-box-lp h2 {
   font-size: 45px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+
+.content-box-lp h2 .line-lp {
+  display: block;
+  width: 10px;
+  height: 3px;
+  background: #4db53c;
+  border-radius: 1px;
+  margin-top: 30px;
+}
+
+.content-box-lp h2 .line-lp:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background: #4db53c;
+  border-radius: 1px;
+  left: 30px;
+}
+
+.content-box-lp h2 .line-lp:after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #4db53c;
+  border-radius: 1px;
+  left: 55px;
 }
 
 .content-box-lp .img img {
