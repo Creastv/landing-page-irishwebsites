@@ -13,6 +13,20 @@ $lg-lp: "only screen and (max-width: 1400px)";
         margin-bottom: 50px;
     }
 }
+#myVideo, .cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    opacity: 0.09;
+  }
+  .cover{
+    background-image: url(assets/images/bg-landingpage.jpg);
+    background-size: cover;
+    background-position: center left;
+    opacity: 0.8;
+  }
 .wraper-lp{
     width:100%;
     background-color:#1b252f;
