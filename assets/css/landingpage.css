@@ -2,6 +2,10 @@
   color: #4db53c;
 }
 
+.logo-lp img {
+  margin-bottom: 50px;
+}
+
 .wraper-lp {
   width: 100%;
   background-color: #1b252f;
@@ -11,13 +15,19 @@
   background-position: center;
 }
 
+@media only screen and (max-width: 568px) {
+  .wraper-lp {
+    margin-bottom: 60px;
+  }
+}
+
 .wraper-lp .wraper-texture-lp {
-  padding: 150px 0px 100px;
+  padding: 50px 0px 100px;
 }
 
 @media only screen and (max-width: 568px) {
   .wraper-lp .wraper-texture-lp {
-    padding: 100px 15px 100px;
+    padding: 30px 15px 100px;
   }
 }
 
@@ -230,6 +240,12 @@
   padding: 60px 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .content-box-lp {
+    padding: 0;
+  }
+}
+
 .content-box-lp h2 {
   font-size: 45px;
   margin-bottom: 15px;
@@ -264,10 +280,24 @@
   left: 55px;
 }
 
+.content-box-lp .img {
+  position: relative;
+  /* I am the fallback */
+  /* Give it everything you got! (use an auto prefixer...) */
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+  position: sticky;
+  top: 100px;
+  /* Required  */
+}
+
 .content-box-lp .img img {
   background: #fff;
   border-radius: 30px;
   padding: 30px;
+  max-width: 80%;
 }
 
 @media only screen and (max-width: 992px) {
@@ -303,7 +333,7 @@
 .content-box-lp .img-right:before {
   z-index: -1;
   right: 15px;
-  top: 0px;
+  top: -30px;
 }
 
 @media only screen and (max-width: 992px) {
@@ -329,12 +359,32 @@
 .content-box-lp .img-left:before {
   z-index: -1;
   left: 15px;
-  top: 0px;
+  top: -30px;
 }
 
 @media only screen and (max-width: 992px) {
   .content-box-lp .img-left:before {
     top: -30px;
   }
+}
+
+.aligned-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .aligned-row {
+    display: initial;
+  }
+}
+
+.aligned-row:before {
+  display: block;
 }
 /*# sourceMappingURL=landingpage.css.map */

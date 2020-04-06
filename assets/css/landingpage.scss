@@ -8,7 +8,11 @@ $lg-lp: "only screen and (max-width: 1400px)";
 .color-lp{
    color: #4db53c
 }
-
+.logo-lp{
+    img{
+        margin-bottom: 50px;
+    }
+}
 .wraper-lp{
     width:100%;
     background-color:#1b252f;
@@ -16,11 +20,14 @@ $lg-lp: "only screen and (max-width: 1400px)";
     position: relative;
     background-size: cover;
     background-position: center;
+    @media #{$xxs-lp}{
+        margin-bottom: 60px;
+    }
     .wraper-texture-lp{
-        padding: 150px 0px 100px;
+        padding: 50px 0px 100px;
         // height: 100vh;
         @media #{$xxs-lp}{
-            padding: 100px 15px 100px;
+            padding: 30px 15px 100px;
         }
         .container{
             @media #{$sm-lp}{
@@ -192,10 +199,13 @@ $lg-lp: "only screen and (max-width: 1400px)";
         }
     }
 }
- 
+
 
 .content-box-lp{
     padding: 60px 0;
+    @media #{$xs-lp}{
+        padding: 0;
+    }
     h2{
         font-size: 45px;
         margin-bottom: 15px;
@@ -227,10 +237,21 @@ $lg-lp: "only screen and (max-width: 1400px)";
         }
     }
     .img{
+        position: relative; /* I am the fallback */
+  
+        /* Give it everything you got! (use an auto prefixer...) */
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
+        position: sticky;
+    
+        top: 100px; /* Required  */
         img{
             background: #fff;
             border-radius: 30px;
             padding:30px;
+            max-width: 80%;
             @media #{$sm-lp}{
                 max-width: 80%;
             }
@@ -265,7 +286,7 @@ $lg-lp: "only screen and (max-width: 1400px)";
         &:before{
             z-index: -1;
             right: 15px;
-            top: 0px;
+            top: -30px;
             @media #{$sm-lp}{
                 top:-30px;
             }
@@ -288,7 +309,7 @@ $lg-lp: "only screen and (max-width: 1400px)";
         &:before{
             z-index: -1;
             left: 15px;
-            top: 0px;
+            top: -30px;
             @media #{$sm-lp}{
                 top:-30px;
             }
@@ -296,3 +317,15 @@ $lg-lp: "only screen and (max-width: 1400px)";
     }
 
 }
+
+
+.aligned-row {
+    display: flex;
+    flex-flow: row wrap;
+    @media #{$xs-lp}{
+        display: initial;
+    }
+}
+    .aligned-row:before {
+      display: block;
+    }
